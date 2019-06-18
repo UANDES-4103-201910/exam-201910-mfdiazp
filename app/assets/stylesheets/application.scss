@@ -14,7 +14,18 @@
 @import "bootstrap";
 
 body {
+  height: 100vh;
   padding-top: 10vh;
+}
+
+.main-wrapper {
+  height: 100%;
+  flex-direction: column;
+}
+
+.footer {
+  display: flex;
+  align-items: flex-end;
 }
 
 .bg-app-primary {
