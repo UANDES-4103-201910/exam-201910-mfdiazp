@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Exam2019</title>
+    <title>Z-Mobile</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,42 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container-fluid h-100">
+      <div class="row">
+        <div class="col">
+          <div id="top_bar">
+            <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-app-primary">
+              <%= link_to "Z-Mobile", root_path, :class => 'navbar-brand'%>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div id="header">
+            <h4>Header Test</h4>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          <div id="secondary_navigation" class=" p-1 bg-app-primary h-100 text-light">
+            <h4>Secondary Test</h4>
+          </div>
+        </div>
+        <div class="col-10">
+          <div id="main_content">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div id="footer" class="p-2 bg-app-secondary h-100 text-light">
+            <h4>Footer Test</h4>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

@@ -15,10 +15,11 @@ ad2 = Address.create(user_id: 1, phone: "+5692784378", address_line_1: "Calle Ca
 ad3 = Address.create(user_id: 2, phone: "+5692987321", address_line_1: "Avenida Pasaje 567", address_line_2: "Casa 4", city: "Valparaíso", country: "Chile", zip_code: "87546")
 ad4 = Address.create(user_id: 3, phone: "+5697548734", address_line_1: "Pasaje Avenida 496", city: "Madrid", country: "España", zip_code: "97864")
 
-Product.create(brand: "Apple", model: "Iphone 9ZX", price: 999999, short_description: "El nuevo modelo de Iphone.", long_description: "El nuevo modelo de Iphone con todas las funcionalidades más modernas.")
-Product.create(brand: "Samsung", model: "Galaxy 8000", variant: "Color Azul", price: 300000, short_description: "El nuevo modelo de Samsung Galaxy.", long_description: "El nuevo modelo de Samsung Galaxy en su versión azul.")
-Product.create(brand: "Samsung", model: "Galaxy 8000", variant: "Color Rojo", price: 300001, short_description: "El nuevo modelo de Samsung Galaxy.", long_description: "El nuevo modelo de Samsung Galaxy en su versión roja.")
+Product.create(category: "Handset", brand: "Apple", model: "Iphone 9ZX", price: 999999, short_description: "El nuevo modelo de Iphone.", long_description: "El nuevo modelo de Iphone con todas las funcionalidades más modernas.")
+Product.create(category: "Handset", brand: "Samsung", model: "Galaxy 8000", variant: "Color Azul", price: 300000, short_description: "El nuevo modelo de Samsung Galaxy.", long_description: "El nuevo modelo de Samsung Galaxy en su versión azul.")
+Product.create(category: "Prepaid Card", brand: "Claro", model: "Tarjeta Prepago $10000", price: 10000, short_description: "Tarjeta de prepago para Claro de $10000.", long_description: "Tarjeta de prepago para uso por teléfonos con tarjetas SIM de Claro válida por $10000.")
+Product.create(category: "Subscription Plan", brand: "Entel", model: "Plan Internet 4G", price: 40000, short_description: "Plan mensual de Internet móvil 4G Entel.", long_description: "Plan mensual de Internet móvil 4G sin límite de datos para teléfonos con tarjeta SIM de Entel.")
 
-Order.create(user_id: 1, billing_address: ad1, shipping_address: ad2, products: Product.where(id: [1, 2]))
+Order.create(user_id: 1, billing_address: ad1, shipping_address: ad2, products: Product.where(id: [1, 3]))
 Order.create(user_id: 2, billing_address: ad3, shipping_address: ad3, products: Product.where(id: 3))
-Order.create(user_id: 1, billing_address: ad4, shipping_address: ad4, products: Product.where(id: [1, 2, 3]))
+Order.create(user_id: 1, billing_address: ad4, shipping_address: ad4, products: Product.where(id: [1, 2, 4]))
